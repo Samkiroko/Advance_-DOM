@@ -8,10 +8,7 @@ const header = document.querySelector('.header');
 const allSections = document.querySelectorAll('.section');
 const allButtons = document.getElementsByTagName('button');
 const message = document.createElement('div');
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
 ///////////////////////////////////////
-
 // Modal window
 
 const openModal = function(e) {
@@ -37,30 +34,6 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
         closeModal();
     }
-});
-
-//////////////////////////
-
-// scroll effect
-
-btnScrollTo.addEventListener('click', e => {
-    section1.scrollIntoView({ behavior: 'smooth' });
-});
-
-//////////////////////////
-// page Navigation
-
-document.querySelectorAll('.nav__link').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-        e.preventDefault();
-        // match strategy
-        if (e.target.classList.contains('nav__link')) {
-            const id = this.getAttribute('href');
-            document.querySelector(id).scrollIntoView({
-                behavior: 'smooth',
-            });
-        }
-    });
 });
 
 /*Lecture*/
@@ -122,6 +95,23 @@ logo.setAttribute('company', 'Bankist');
 // logo.classList.remove('c', 'j');
 // logo.classList.toggle('c');
 // logo.classList.contains('c'); //not includes
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', e => {
+    // const s1coords = section1.getBoundingClientRect();
+    // console.log(s1coords);
+
+    // console.log(e.target.getBoundingClientRect());
+    // // scrolling
+    // window.scrollTo({
+    //     left: s1coords.left + window.pageXOffset,
+    //     top: s1coords.top + window.pageYOffset,
+    //     behavior: 'smooth',
+    // });
+    section1.scrollIntoView({ behavior: 'smooth' });
+});
 
 const h1 = document.querySelector('h1');
 // h1.addEventListener('mouseenter', e => {

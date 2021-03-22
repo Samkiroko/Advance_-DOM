@@ -53,16 +53,10 @@ btnScrollTo.addEventListener('click', e => {
 document.querySelectorAll('.nav__link').forEach(function(el) {
     el.addEventListener('click', function(e) {
         e.preventDefault();
-        // match strategy
-        if (e.target.classList.contains('nav__link')) {
-            const id = this.getAttribute('href');
-            document.querySelector(id).scrollIntoView({
-                behavior: 'smooth',
-            });
-        }
+        const id = this.getAttribute('href');
+        console.log(id);
     });
 });
-
 /*Lecture*/
 
 // Selecting elements
