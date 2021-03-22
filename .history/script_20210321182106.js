@@ -56,8 +56,8 @@ const message = document.createElement('div');
 message.classList.add('cookie-message');
 message.innerHTML =
     'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
-// header.prepend(message);
-header.append(message);
+header.prepend(message);
+// header.append(message);
 // header.append(message.cloneNode(true));
 
 //  Delete elements
@@ -68,31 +68,3 @@ document.querySelector('.btn--close-cookie').addEventListener('click', () => {
 
 // styles
 message.style.backgroundColor = '#37383d';
-message.style.width = '120%';
-
-console.log(getComputedStyle(message));
-
-const newLocal = (message.style.height = `${
-  Number.parseFloat(getComputedStyle(message).height, 10) + 30
-}px`);
-
-document.documentElement.style.setProperty('--color-primary', 'orangered');
-
-// attributes
-const logo = document.querySelector('.nav__logo');
-console.log(logo.alt);
-
-// Non-standard
-console.log(logo.designer);
-console.log(logo.getAttribute('designer'));
-logo.setAttribute('company', 'Bankist');
-
-// Data  attributes
-// data-version-name="3" == dataset.versionName
-
-// classes
-
-logo.classList.add('c');
-logo.classList.remove('c', 'j');
-logo.classList.toggle('c');
-logo.classList.contains('c'); //not includes

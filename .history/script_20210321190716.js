@@ -95,4 +95,4 @@ logo.setAttribute('company', 'Bankist');
 logo.classList.add('c');
 logo.classList.remove('c', 'j');
 logo.classList.toggle('c');
-logo.classList.contains('c'); //not includes
+logo.classList.contains('c');

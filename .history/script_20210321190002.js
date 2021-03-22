@@ -85,14 +85,3 @@ console.log(logo.alt);
 // Non-standard
 console.log(logo.designer);
 console.log(logo.getAttribute('designer'));
-logo.setAttribute('company', 'Bankist');
-
-// Data  attributes
-// data-version-name="3" == dataset.versionName
-
-// classes
-
-logo.classList.add('c');
-logo.classList.remove('c', 'j');
-logo.classList.toggle('c');
-logo.classList.contains('c'); //not includes
